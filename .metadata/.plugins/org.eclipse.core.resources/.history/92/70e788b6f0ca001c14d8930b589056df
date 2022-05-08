@@ -1,0 +1,26 @@
+#include<stdint.h>
+#include "inc/tm4c123gh6pm.h"
+uint32_t value;
+int main(void)
+{
+    SYSCTL_RCC_R |= 0x02400540;// Configure system clock
+    SYSCTL_RCGCGPIO_R|=SYSCTL_RCGCGPIO_R5;//System PortF peripheral clock enable
+    GPIO_PORTF_LOCK_R |=0x4C4F434B;//Unclock Code
+    GPIO_PORTF_CR_R   |=0x00000001;//Commit Register
+    GPIO_PORTF_DEN_R |=0x000000FF;// enable the pins of port as DIGITAL
+    GPIO_PORTF_DIR_R |=0x00000004;//Configure the ports for LED & switch
+    GPIO_PORTF_PUR_R |=0x00000001;//Configure Pull-up resistor on PF0
+    while(1)
+    {
+      value=GPIO_PORTF_DATA_R & 0x00000001;//read the status of switch
+      if(value==0x0000000)
+      {
+          GPIO_PORTF_DATA_R=0x00000004;//on board LED on
+       }
+      else
+        {
+          GPIO_PORTF_DATA_R=0x00000000;//on board LED off
+        }
+    }
+
+}

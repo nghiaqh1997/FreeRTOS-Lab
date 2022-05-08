@@ -1,0 +1,1949 @@
+!SESSION 2022-05-02 10:03:00.422 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-02 10:03:27.330
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-02 10:03:27.331
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.348
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.349
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.350
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.351
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.352
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.382
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.396
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.402
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 10:03:35.471
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY org.eclipse.equinox.event 4 0 2022-05-02 10:03:53.919
+!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/application/ApplicationElement/tags/ADD] {ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@6a8da5c5 (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@60e5eed0, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), org.eclipse.e4.data={ChangedElement=org.eclipse.e4.primaryDataStack=org.eclipse.e4.ui.model.application.ui.basic.impl.PartStackImpl@6a8da5c5 (tags: [org.eclipse.e4.primaryDataStack, EditorStack, active, Maximized], contributorURI: null) (widget: CTabFolder {}, renderer: org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer@60e5eed0, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null), AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {}, NewValue=Maximized}, AttName=tags, EventType=ADD, Position=3, Widget=CTabFolder {}, NewValue=Maximized} to handler org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler@285b63eb
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.IllegalArgumentException: 
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.lambda$0(UIEventObjectSupplier.java:64)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:146)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5786)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:304)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:304)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.setIntroStandby(WorkbenchIntroManager.java:200)
+	at org.eclipse.ui.internal.WorkbenchIntroManager.showIntro(WorkbenchIntroManager.java:139)
+	at org.eclipse.ui.application.WorkbenchWindowAdvisor.openIntro(WorkbenchWindowAdvisor.java:188)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.openIntro(IDEWorkbenchWindowAdvisor.java:572)
+	at org.eclipse.ui.internal.WorkbenchWindow.setup(WorkbenchWindow.java:963)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:95)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.inject(ContextInjectionFactory.java:83)
+	at org.eclipse.ui.internal.Workbench.createWorkbenchWindow(Workbench.java:1505)
+	at org.eclipse.ui.internal.StandardTrim.createStatusLine(StandardTrim.java:119)
+	at org.eclipse.ui.internal.StandardTrim.createWidget(StandardTrim.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:345)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:227)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:94)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:37)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ToolControlRenderer.createWidget(ToolControlRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
+	at org.eclipse.e4.ui.workbench.renderers.swt.TrimBarRenderer.processContents(TrimBarRenderer.java:134)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:687)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:50)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:176)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:438)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:431)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.findValidElementsToMinimize(MinMaxAddon.java:824)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.getElementsToMinimize(MinMaxAddon.java:767)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.maximize(MinMaxAddon.java:696)
+	at org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon.subscribeTopicTagsChanged(MinMaxAddon.java:387)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 92 more
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-02 10:03:54.277
+!MESSAGE CCS HTTP adapter started! [ccs.port:37589] - Open 'http://localhost:37589/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-02 10:04:04.682
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 10:05:03.629
+!MESSAGE Indexed 'freertos_demo' (13 sources, 51 headers) in 4.08 sec: 2,375 declarations; 13,621 references; 0 unresolved inclusions; 7 syntax errors; 43 unresolved names (0.27%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 10:08:03.656
+!MESSAGE Indexed 'freertos_ccs_gcc_project_template' (14 sources, 55 headers) in 2.78 sec: 3,440 declarations; 13,883 references; 7 unresolved inclusions; 215 syntax errors; 446 unresolved names (2.5%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 10:08:48.420
+!MESSAGE Indexed 'blinky' (2 sources, 11 headers) in 0.192 sec: 335 declarations; 444 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.ui 2 2 2022-05-02 10:10:18.898
+!MESSAGE com.ti.ccstudio.system.setup.ui.views.TargetConfigurationView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 10:23:55.874
+!MESSAGE Indexed 'lab1' (2 sources, 4 headers) in 0.049 sec: 52 declarations; 236 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2022-05-02 11:05:27.955
+!MESSAGE REX Launching REX 4.1 (online)
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2022-05-02 11:05:28.567
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+!SESSION 2022-05-02 11:10:17.526 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-02 11:11:01.674
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-02 11:11:01.677
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.363
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.364
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.364
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.365
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.366
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.369
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.371
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.372
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 11:11:07.378
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2022-05-02 11:11:09.378
+!MESSAGE REX Setting browser URL to: http://dev.ti.com/tirex4-desktop
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-02 11:11:10.128
+!MESSAGE CCS HTTP adapter started! [ccs.port:33317] - Open 'http://localhost:33317/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-02 11:11:15.156
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+!SESSION 2022-05-02 13:27:47.403 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-02 13:28:11.406
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-02 13:28:11.496
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-02 13:29:50.983
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.113
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.113
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.114
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.114
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.114
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.326
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.346
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.363
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-02 13:29:53.958
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-02 13:29:54.661
+!MESSAGE CCS HTTP adapter started! [ccs.port:46317] - Open 'http://localhost:46317/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 13:36:59.307
+!MESSAGE Indexed 'lab1' (13 sources, 51 headers) in 2.45 sec: 2,375 declarations; 13,621 references; 0 unresolved inclusions; 7 syntax errors; 43 unresolved names (0.27%)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-02 15:12:03.602
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-02 15:12:03.602
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3ee71918,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21983763,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-02 15:18:39.600
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-02 15:18:39.600
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.constant,Extract Constant - Refactoring ,
+		Extracts a constant for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6bae40d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21983763,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-02 15:18:39.618
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-02 15:18:39.618
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.c.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f5d0eff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39b18180,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-02 15:18:39.618
+!MESSAGE A conflict occurred for ALT+ARROW_UP:
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.maximize,Maximize Active View or Editor,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a503313,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.moveLineUp,Move Lines Up,
+		Moves the selected lines up,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@43e17876,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2022-05-02 15:18:56.034
+!MESSAGE Error opening /dev/ttyACM0: No such file or directory
+!STACK 0
+java.io.IOException: Error opening /dev/ttyACM0: No such file or directory
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:328)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:78)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:160)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:441)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:327)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:467)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:407)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$3.doRun(TerminalService.java:313)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$3$1.run(TerminalService.java:286)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4910)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4432)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 16:04:06.703
+!MESSAGE Indexed 'lab2' (2 sources, 4 headers) in 0.043 sec: 52 declarations; 236 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 16:04:28.021
+!MESSAGE Indexed 'lab2' (12 sources, 50 headers) in 0.989 sec: 2,363 declarations; 13,403 references; 0 unresolved inclusions; 7 syntax errors; 43 unresolved names (0.27%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 16:07:15.996
+!MESSAGE Indexed 'blinky' (2 sources, 11 headers) in 0.119 sec: 335 declarations; 444 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 16:11:08.300
+!MESSAGE Indexed 'FSM' (8 sources, 41 headers) in 1.37 sec: 1,973 declarations; 7,218 references; 0 unresolved inclusions; 10 syntax errors; 75 unresolved names (0.81%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-05-02 18:43:04.245
+!MESSAGE Indexed 'blinky' (2 sources, 11 headers) in 0.191 sec: 335 declarations; 444 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2022-05-03 07:56:29.216 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-03 07:56:37.479
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-03 07:56:37.505
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-03 07:57:05.024
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.435
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.435
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.436
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.436
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.436
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.616
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.760
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:08.872
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 07:57:09.896
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-03 07:57:10.351
+!MESSAGE CCS HTTP adapter started! [ccs.port:44479] - Open 'http://localhost:44479/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.jface 2 0 2022-05-03 09:50:17.027
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 09:50:17.027
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.constant,Extract Constant - Refactoring ,
+		Extracts a constant for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@582f948d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b6031bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-03 09:50:17.039
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 09:50:17.039
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.c.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@369f3afa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6158c9a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 09:50:17.039
+!MESSAGE A conflict occurred for ALT+ARROW_UP:
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.maximize,Maximize Active View or Editor,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@395fac29,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.moveLineUp,Move Lines Up,
+		Moves the selected lines up,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@671c7b72,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-03 10:17:15.081
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 10:17:15.081
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9512d38,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b6031bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+!SESSION 2022-05-03 15:35:28.728 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-03 15:35:39.457
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-03 15:35:39.487
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-03 15:36:05.114
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:08.354
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:08.354
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:08.354
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:08.355
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:08.355
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:09.248
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:09.369
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:09.431
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-03 15:36:10.052
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-03 15:36:10.289
+!MESSAGE CCS HTTP adapter started! [ccs.port:46633] - Open 'http://localhost:46633/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.jface 2 0 2022-05-03 20:09:46.434
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 20:09:46.435
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29f1d00b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46cae292,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-03 21:11:05.462
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 21:11:05.462
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.constant,Extract Constant - Refactoring ,
+		Extracts a constant for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f22aece,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46cae292,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-03 21:11:06.762
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 21:11:06.762
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.c.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7cf97fee,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@443fbd1c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-03 21:11:06.762
+!MESSAGE A conflict occurred for ALT+ARROW_UP:
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.maximize,Maximize Active View or Editor,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@388b989e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.moveLineUp,Move Lines Up,
+		Moves the selected lines up,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7215159f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.cdt.ui 2 0 2022-05-03 21:33:36.458
+!MESSAGE The 'org.eclipse.cdt.ui.HelpCompletionProposalComputer' proposal computer from the 'org.eclipse.cdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+!SESSION 2022-05-04 00:01:12.189 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-04 00:01:28.911
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-04 00:01:28.922
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-04 00:01:41.419
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.660
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.661
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.661
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.664
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.664
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.668
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.669
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.670
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:01:41.678
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-04 00:01:41.753
+!MESSAGE CCS HTTP adapter started! [ccs.port:38001] - Open 'http://localhost:38001/ide' in web browser to see listing of available APIs...
+!SESSION 2022-05-04 00:20:38.758 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-04 00:20:42.336
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-04 00:20:42.338
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-04 00:20:53.188
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.770
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.771
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.772
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.775
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.776
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.778
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.779
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.780
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-04 00:20:53.796
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-04 00:20:54.073
+!MESSAGE CCS HTTP adapter started! [ccs.port:42775] - Open 'http://localhost:42775/ide' in web browser to see listing of available APIs...
+!SESSION 2022-05-05 11:33:33.921 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-05 11:33:42.195
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-05 11:33:42.223
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-05 11:34:09.631
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.551
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.551
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.552
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.553
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.555
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.717
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.740
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:12.757
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 11:34:13.191
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-05 11:34:14.122
+!MESSAGE CCS HTTP adapter started! [ccs.port:34517] - Open 'http://localhost:34517/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.app.center 4 0 2022-05-05 11:34:44.336
+!MESSAGE Unable to read http://software-dl.ti.com/ccs/non-esd/ccs_appcenter/apps_10.2.0.json file.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:704)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1569)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.URL.openStream(URL.java:1045)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.readFile(CCSAppCenter.java:190)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.getAppJson_0(CCSAppCenter.java:206)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter.access$1(CCSAppCenter.java:205)
+	at com.ti.ccstudio.app.center.internal.CCSAppCenter$1.run(CCSAppCenter.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-05-05 11:38:19.399
+!MESSAGE Connection to https://software-dl.ti.com/ccs/esd/device_support_ccsv9/sitara_mcu/p2.index failed on Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.readV3Record(InputRecord.java:593)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:532)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:355)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 11:41:05.710
+!MESSAGE Communication with repository at https://software-dl.ti.com/ccs/esd/device_support_ccsv9/sitara_mcu/content.xml.xz failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 11:45:17.860
+!MESSAGE Communication with repository at http://software-dl.ti.com/ccs/esd/CCSv10/Updates failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 11:49:18.452
+!MESSAGE Communication with repository at http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/gcc/Updates/linux failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-05-05 11:54:17.580
+!MESSAGE Connection to http://software-dl.ti.com/ccs/esd/tirex/updates/tirex-4.8.0/p2.index failed on Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:355)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 12:03:07.021
+!MESSAGE Communication with repository at http://software-dl.ti.com/ccs/esd/tirex/updates/tirex-4.8.0 failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 12:07:07.400
+!MESSAGE Communication with repository at http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/content.xml.xz failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 12:11:11.369
+!MESSAGE Communication with repository at http://software-dl.ti.com/ccs/non-esd/dvt/ccs6.0 failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-05-05 12:15:18.372
+!MESSAGE Connection to https://software-dl.ti.com/emulation/esd/emupack/ccsv9up/win64/latest/p2.index failed on Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.readV3Record(InputRecord.java:593)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:532)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:355)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 12:21:25.882
+!MESSAGE Communication with repository at https://software-dl.ti.com/emulation/esd/emupack/ccsv9up/win64/latest failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-05-05 12:23:27.392
+!MESSAGE Connection to https://software-dl.ti.com/ccs/esd/device_support_ccsv9/sitara/p2.index failed on Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:355)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2022-05-05 12:31:36.187
+!MESSAGE No repository found at https://software-dl.ti.com/ccs/esd/device_support_ccsv9/sitara.
+
+!ENTRY org.eclipse.equinox.p2.repository 4 1002 2022-05-05 12:35:46.692
+!MESSAGE Communication with repository at https://software-dl.ti.com/ccs/esd/device_support_ccsv9/auto failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:282)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-05-05 12:48:23.391
+!MESSAGE Connection to http://software-dl.ti.com/ccs/esd/tirex/updates/tirex-4.8.0/p2.index failed on Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.readV3Record(InputRecord.java:593)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:532)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:355)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-05-05 12:56:58.788
+!MESSAGE Connection to https://software-dl.ti.com/emulation/esd/emupack/ccsv9up/win64/latest/p2.index failed on Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:355)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-05-05 13:07:29.735
+!MESSAGE Connection to https://software-dl.ti.com/ccs/esd/device_support_ccsv9/auto/p2.index failed on Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to downloads.ti.com:443 [downloads.ti.com/23.49.17.133] failed: Read timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:396)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:355)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+!SESSION 2022-05-05 16:17:33.681 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-05 16:17:52.885
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-05 16:17:52.909
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-05 16:18:04.630
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.190
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.193
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.196
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.198
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.202
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.205
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.207
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.208
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-05 16:18:05.220
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-05 16:18:05.350
+!MESSAGE CCS HTTP adapter started! [ccs.port:43003] - Open 'http://localhost:43003/ide' in web browser to see listing of available APIs...
+!SESSION 2022-05-06 10:39:55.181 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-06 10:40:06.600
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-06 10:40:06.684
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-06 10:40:36.035
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.120
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.121
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.121
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.122
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.122
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.450
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.466
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:40.516
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 10:40:41.061
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-06 10:40:41.220
+!MESSAGE CCS HTTP adapter started! [ccs.port:32807] - Open 'http://localhost:32807/ide' in web browser to see listing of available APIs...
+!SESSION 2022-05-06 14:36:34.257 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-06 14:36:38.229
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-06 14:36:38.231
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-06 14:36:56.404
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.122
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.123
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.124
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.132
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.133
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.139
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.140
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.144
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 14:36:57.169
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-06 14:36:57.414
+!MESSAGE CCS HTTP adapter started! [ccs.port:41369] - Open 'http://localhost:41369/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.jface 2 0 2022-05-06 14:47:21.750
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 14:47:21.750
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.constant,Extract Constant - Refactoring ,
+		Extracts a constant for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6886ef76,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5b2dc580,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 14:47:21.750
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1cd1d7f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5b2dc580,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-06 14:47:21.790
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 14:47:21.790
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.c.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61fd8c74,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c2e5875,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 14:47:21.790
+!MESSAGE A conflict occurred for ALT+ARROW_UP:
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.maximize,Maximize Active View or Editor,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a792df3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.moveLineUp,Move Lines Up,
+		Moves the selected lines up,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7cfc688e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-05-06 14:53:11.217
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Timed out while waiting for target powerup/polling a hardware resource.
+
+!SESSION 2022-05-06 19:10:49.626 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-06 19:10:58.009
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-06 19:10:58.027
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-06 19:11:20.279
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:21.994
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:21.994
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:21.994
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:21.995
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:21.995
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:22.036
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:22.066
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:22.071
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-06 19:11:22.141
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-06 19:11:22.286
+!MESSAGE CCS HTTP adapter started! [ccs.port:42965] - Open 'http://localhost:42965/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-05-06 19:26:49.769
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Timed out while waiting for target powerup/polling a hardware resource.
+
+
+!ENTRY org.eclipse.jface 2 0 2022-05-06 19:26:51.033
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 19:26:51.033
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@526a5855,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e54a221,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-05-06 19:50:16.882
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Timed out while waiting for target powerup/polling a hardware resource.
+
+
+!ENTRY org.eclipse.jface 2 0 2022-05-06 19:50:23.828
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 19:50:23.828
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.constant,Extract Constant - Refactoring ,
+		Extracts a constant for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c1d6c54,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e54a221,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-05-06 19:53:15.988
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Timed out while waiting for target powerup/polling a hardware resource.
+
+
+!ENTRY org.eclipse.jface 2 0 2022-05-06 23:21:50.128
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 23:21:50.128
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.c.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@155aad00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5715f9b2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 23:21:50.128
+!MESSAGE A conflict occurred for ALT+ARROW_UP:
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.maximize,Maximize Active View or Editor,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66ef3064,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.moveLineUp,Move Lines Up,
+		Moves the selected lines up,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@37600407,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2022-05-07 17:04:10.750 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-07 17:04:18.612
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-07 17:04:18.644
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-07 17:04:48.459
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.060
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.060
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.060
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.061
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.061
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.167
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.266
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.341
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-07 17:04:50.957
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-07 17:04:51.238
+!MESSAGE CCS HTTP adapter started! [ccs.port:44357] - Open 'http://localhost:44357/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.jface 2 0 2022-05-07 18:52:22.551
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-07 18:52:22.551
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6673c0a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@664af94e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-07 18:52:41.866
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-07 18:52:41.866
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.constant,Extract Constant - Refactoring ,
+		Extracts a constant for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@479510d0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@664af94e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2022-05-07 18:52:41.876
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-07 18:52:41.876
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.c.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c814e3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@766f2378,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-07 18:52:41.876
+!MESSAGE A conflict occurred for ALT+ARROW_UP:
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.maximize,Maximize Active View or Editor,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@92611d1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.moveLineUp,Move Lines Up,
+		Moves the selected lines up,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@665a93b5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-05-07 22:27:26.098
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Reading Register PC: Timed out while waiting for target powerup/polling a hardware resource.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-05-08 00:14:14.168
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Connection with the target was unexpectedly lost.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2022-05-08 00:14:14.222
+!MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+!SESSION 2022-05-08 07:40:57.013 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-08 07:42:06.487
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-08 07:42:06.510
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-08 07:42:32.178
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.483
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.484
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.484
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.485
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.485
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.534
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.619
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:37.638
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 07:42:38.005
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-08 07:42:38.274
+!MESSAGE CCS HTTP adapter started! [ccs.port:43589] - Open 'http://localhost:43589/ide' in web browser to see listing of available APIs...
+!SESSION 2022-05-08 16:17:58.587 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2022-05-08 16:18:14.083
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2022-05-08 16:18:14.139
+!MESSAGE debugServerDir=/home/nghia/ti/ccs1020/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2022-05-08 16:18:59.041
+!MESSAGE CCS IDE session started!
+	CCS build: 10.2.0.00009
+	CCS location: /home/nghia/ti/ccs1020/ccs
+	Workspace location: /home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.504
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.505
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.505
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.506
+!MESSAGE Platform os: linux
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.506
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.554
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.795
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:05.894
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2022-05-08 16:19:06.246
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2022-05-08 16:19:06.393
+!MESSAGE CCS HTTP adapter started! [ccs.port:40265] - Open 'http://localhost:40265/ide' in web browser to see listing of available APIs...
