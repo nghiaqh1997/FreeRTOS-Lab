@@ -1,9 +1,9 @@
-#Tiva TM4C123 Launchpad FreeRTOS Demo#
+# Tiva TM4C123 Launchpad FreeRTOS Demo #
 Những bài lập trình cơ bản về bé Tiva này
-##Required Components##
+## Required Components ##
 - Một bé Tiva
 - CCS
-###Contents###
+### Contents ###
 - blinky
 	- Chứa hàm khởi động tiva
 - FSM
