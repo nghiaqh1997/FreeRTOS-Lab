@@ -63,53 +63,13 @@ void vApplicationTickHook( void )
 /*-----------------------------------------------------------*/
 TaskHandle_t xTask1Handle;
 TaskHandle_t xTask2Handle;
-QueueHandle_t xQueue;
-QueueHandle_t xQueue2;
-SemaphoreHandle_t xSemaphore;
-uint8_t State;
-char string[10];
-int i = 0;
+
 void vTask1(void *pvParameters){
-    TickType_t xLastTimeWaken = xTaskGetTickCount();
-    char led[3][10] = {
-                       "ledon",
-                       "ledoff",
-                       "ledtoggle"
-    };
     while(1){
-        if(xSemaphoreTake(xSemaphore,portMAX_DELAY)==pdPASS){
-            if(memcmp(led[0],string,5)==0){
-                GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
-                UARTprintf("LEDRED sang\n");
-            }else if(memcmp(led[1],string,6)==0){
-                GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
-                UARTprintf("LEDRED tat\n");
-            }
-            else if((memcmp(led[2],string,9)==0)&&(State!=2)){
-                UARTprintf("LEDRED nhap nhay");
-                GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
-                vTaskDelayUntil(&xLastTimeWaken, pdMS_TO_TICKS(1000));
-                GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
-                vTaskDelayUntil(&xLastTimeWaken, pdMS_TO_TICKS(1000));
-                xSemaphoreGive(xSemaphore);
-            }
-            //UARTprintf("%s",string);
-        }
     }
 }
 void vTask2(void *pvParameters){
-    unsigned char ucReceivedValue;
-    portBASE_TYPE xStatus;
     while(1){
-        if(i==10){
-            i = 0;
-        }
-        xStatus = xQueueReceive(xQueue,&ucReceivedValue,portMAX_DELAY);
-        if(xStatus == pdPASS){
-            string[i] = ucReceivedValue;
-            i = i + 1;
-
-        }
     }
 }
 
@@ -122,33 +82,15 @@ void UART0IntHandler(){
     while(UARTCharsAvail(UART0_BASE)){
         received_character = UARTCharGet(UART0_BASE);
         UARTCharPutNonBlocking(UART0_BASE, received_character); //echo character
-        if(received_character == 13){
-            i = 0;
-            UARTprintf("\n\r");
-            xSemaphoreGiveFromISR(xSemaphore,&xHigherPriorityTaskWoken);
-            portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
-        }else{
-            xQueueSendFromISR(xQueue,&received_character,&xHigherPriorityTaskWoken);
-        }
-        if(received_character == 'r'){
-            State = 2;
-        }else if(received_character == 'l'){
-            State = 0;
-        }
+        if(received_character == 13) UARTCharPutNonBlocking(UART0_BASE, 10);
     }
 }
 int main(){
     SysCtlClockSet(SYSCTL_SYSDIV_4|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
     Uart_Init();
-    PortF_Init();
-    xTaskCreate(vTask1,"Task 1",1000,(void *)0,2,&xTask1Handle);
-    xTaskCreate(vTask2,"Task 2",1000,(void *)0,1,&xTask2Handle);
-    xQueue = xQueueCreate(10,sizeof(char));
-    xSemaphore = xSemaphoreCreateBinary();
     IntMasterEnable();
     //UARTprintf("%d",xPortGetFreeHeapSize());
     vTaskStartScheduler();
-
     while(1){
 
     }

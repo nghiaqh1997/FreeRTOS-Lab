@@ -1,9 +1,0 @@
-#ifndef CONFIG_REGISTER_CONFIG_REGISTER_H_
-#define CONFIG_REGISTER_CONFIG_REGISTER_H_
-
-void vPortFInit(void);
-void vUartInit(void);
-
-
-
-#endif /* CONFIG_REGISTER_CONFIG_REGISTER_H_ */
