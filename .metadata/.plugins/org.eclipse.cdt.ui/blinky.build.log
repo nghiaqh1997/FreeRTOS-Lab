@@ -4,8 +4,8 @@
 /home/nghia/ti/ccs1020/ccs/utils/bin/gmake -k clean 
  
 rm -rf  "blinky.bin"  "blinky.out" 
-rm -rf "blinky.obj" "startup_ccs.obj" "driver/startup.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
-rm -rf "blinky.d" "startup_ccs.d" "driver/startup.d" "utils/uartstdio.d" "utils/ustdlib.d" 
+rm -rf "blinky.obj" "startup_ccs.obj" "Nokia5110/SPI.obj" "driver/startup.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
+rm -rf "blinky.d" "startup_ccs.d" "Nokia5110/SPI.d" "driver/startup.d" "utils/uartstdio.d" "utils/ustdlib.d" 
 Finished clean
  
 

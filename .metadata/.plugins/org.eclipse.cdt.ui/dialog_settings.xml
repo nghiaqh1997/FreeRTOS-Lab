@@ -18,4 +18,6 @@
 	<section name="CResourceRenameRefactoringInputPage">
 		<item key="updateReferences" value="true"/>
 	</section>
+	<section name="NewClassWizardPage">
+	</section>
 </section>

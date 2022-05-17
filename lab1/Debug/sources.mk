@@ -117,6 +117,7 @@ FSM \
 LAB/1_TASK \
 LAB/2_QUEUE \
 LAB/3_Interrupt \
+Nokia5110 \
 drivers \
 third_party/FreeRTOS/Source \
 third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F \

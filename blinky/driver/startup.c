@@ -22,6 +22,8 @@
 #include "driverlib/ssi.h"
 #include <string.h>
 #include "startup.h"
+#include "driverlib/adc.h"
+#include "inc/hw_adc.h"
 void PortF_Init(void){
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3);
@@ -43,21 +45,23 @@ void PortFIntHandle(){
             GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3|GPIO_PIN_1|GPIO_PIN_2, GPIO_PIN_3);
         }
         SysCtlDelay(SysCtlClockGet()/3);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3|GPIO_PIN_1|GPIO_PIN_2, 0);
     }
 }
 void Interrupt_GPIO_Init(){
     GPIOIntTypeSet(GPIO_PORTF_BASE, GPIO_PIN_4, GPIO_FALLING_EDGE);
     GPIOIntEnable(GPIO_PORTF_BASE, GPIO_INT_PIN_4);
-    //GPIOIntRegister(GPIO_PORTF_BASE, PortFIntHandle);
+    GPIOIntRegister(GPIO_PORTF_BASE, PortFIntHandle);
     IntEnable(INT_GPIOF);
     //IntMasterEnable();
     //IntPrioritySet(INT_GPIOF, 0xE0);
+
 }
 void Systick_Handle(){
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
 }
 void Systick_Init(){
-    SysTickPeriodSet(SysCtlClockGet()/1000);
+    SysTickPeriodSet(SysCtlClockGet()/3);
     SysTickEnable();
     SysTickIntEnable();
     //SysTickIntRegister(Systick_Handle);
@@ -94,6 +98,7 @@ void Uart_Init(){
     //UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT); //enable Receiver interrupts
     //UARTIntRegister(UART0_BASE, UART0IntHandler);
     UARTprintf("\033[2J\033[HEnter Text: "); // erase screen, put cursor at home position (0,0),prompt
+    //IntPrioritySet(INT_UART0, 0x00);
 }
 void Timer0Handle(){
     TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
@@ -102,11 +107,43 @@ void Timer0Handle(){
 void Timer_Init(){
     SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);
     TimerConfigure(TIMER0_BASE, TIMER_CFG_PERIODIC);
-    TimerLoadSet(TIMER0_BASE, TIMER_A, (SysCtlClockGet()-1));
+    TimerLoadSet(TIMER0_BASE, TIMER_A, 20000000-1);
 
     //TimerIntRegister(TIMER0_BASE, TIMER_A, Timer0Handle);
     //TimerIntEnable(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
     //IntEnable(INT_TIMER0A);
     TimerEnable(TIMER0_BASE, TIMER_A);
     //IntMasterEnable();
+}
+uint32_t Value;
+void ADCSS3Handler(){
+    ADCIntClear(ADC0_BASE, 3);
+    ADCSequenceDataGet(ADC0_BASE, 3, &Value);
+    UARTprintf("%d\n",Value);
+    GPIO_PORTF_DATA_R ^= 0x02;
+}
+void ADC_Timer_Init(){
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+    SysCtlDelay(3);
+    GPIOPinTypeGPIOInput(GPIO_PORTE_BASE, GPIO_PIN_2);
+    GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_2);
+
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);
+    SysCtlDelay(3);
+    TimerConfigure(TIMER0_BASE, TIMER_CFG_PERIODIC);
+    TimerLoadSet(TIMER0_BASE, TIMER_A, SysCtlClockGet()-1);
+
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
+    SysCtlDelay(3);
+    ADCHardwareOversampleConfigure(ADC0_BASE, 64);
+    ADCSequenceDisable(ADC0_BASE, 3);
+    TimerControlTrigger(TIMER0_BASE, TIMER_A, true);
+    ADCSequenceConfigure(ADC0_BASE, 3, ADC_TRIGGER_TIMER, 0);
+    ADCSequenceStepConfigure(ADC0_BASE, 3, 0, ADC_CTL_CH1|ADC_CTL_IE|ADC_CTL_END);
+    ADCSequenceEnable(ADC0_BASE, 3);
+
+    ADCIntEnable(ADC0_BASE, 3);
+    IntEnable(INT_ADC0SS3);
+    TimerEnable(TIMER0_BASE, TIMER_A);
+    ADCIntRegister(ADC0_BASE, 3, ADCSS3Handler);
 }

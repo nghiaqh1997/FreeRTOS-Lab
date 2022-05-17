@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="INT_GPIOF"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="INT_GPIOF"/>
-			<item value="BASE_TYPE"/>
-			<item value="UARTStdioConfig"/>
-			<item value="xTaskCreate"/>
-			<item value="configMINIMAL_STACK_SIZE"/>
-			<item value="configTIMER_TASK_PRIORITY"/>
-			<item value="xTimerGenericCommand"/>
-			<item value="configTimer"/>
-			<item value="configUSE_QUEUE_SETS"/>
-			<item value="configUSE_TIME_SLICING"/>
-			<item value="dynamic"/>
-			<item value="configUSE_TIMERS"/>
-			<item value="configMAX_CO_ROUTINE_PRIORITIES"/>
-			<item value="port"/>
-			<item value="portYIELD"/>
+			<item value="PORTA"/>
+			<item value="SSI0"/>
+			<item value="PORTB"/>
+			<item value="INT_ADC0SS0"/>
+			<item value="TARGET_IS_TM4C123_RB1"/>
+			<item value="TARGET_IS_BLIZZARD_RB1"/>
+			<item value="systick"/>
+			<item value="INT_SYSCTL"/>
+			<item value="dtostrf"/>
+			<item value="__LM4F120H5QR__"/>
+			<item value="GPIO_PORTB_DATA_R"/>
+			<item value="GPIO_PORTA_DATA_R"/>
+			<item value="GPIO_PORTF"/>
+			<item value="tm4c123"/>
+			<item value="math"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="746"/>
-		<item key="DIALOG_Y_ORIGIN" value="54"/>
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="162"/>
 		<item key="DIALOG_WIDTH" value="348"/>
 		<item key="DIALOG_HEIGHT" value="437"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

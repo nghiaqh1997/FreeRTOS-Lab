@@ -1,26 +1,13 @@
 
-**** Build of configuration Debug for project lab1 ****
+**** Clean-only build of configuration Debug for project lab1 ****
 
-/home/nghia/ti/ccs1020/ccs/utils/bin/gmake -k all 
+/home/nghia/ti/ccs1020/ccs/utils/bin/gmake -k clean 
  
-Building file: "../freertos_demo.c"
-Invoking: Arm Compiler
-"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --include_path="/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include" --include_path="/home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA/lab1" --include_path="/home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl" --include_path="/home/nghia/ti/SW-TM4C-2.1.4.178" --include_path="/home/nghia/ti/SW-TM4C-2.1.4.178/third_party" --include_path="/home/nghia/ti/SW-TM4C-2.1.4.178/third_party/FreeRTOS/Source/include" --include_path="/home/nghia/ti/SW-TM4C-2.1.4.178/third_party/FreeRTOS" --include_path="/home/nghia/ti/SW-TM4C-2.1.4.178/third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F" --advice:power=all --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=TARGET_IS_TM4C123_RB1 -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --ual --preproc_with_compile --preproc_dependency="freertos_demo.d_raw"  "../freertos_demo.c"
-"../freertos_demo.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
-"../freertos_demo.c", line 72: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
-"../freertos_demo.c", line 80: warning #179-D: variable "xHigherPriorityTaskWoken" was declared but never referenced
-"../freertos_demo.c", line 83: remark #2624-D: (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-"../freertos_demo.c", line 94: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
-Finished building: "../freertos_demo.c"
- 
-Building target: "lab1.out"
-Invoking: Arm Linker
-"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --advice:power=all --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=TARGET_IS_TM4C123_RB1 -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --ual -z -m"freertos_demo_ccs.map" --heap_size=0 --stack_size=512 -i"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/lib" -i"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="lab1_linkInfo.xml" --rom_model -o "lab1.out" "./freertos_demo.obj" "./startup_ccs.obj" "./Config_Register/Config_Register.obj" "./FSM/FSM.obj" "./LAB/1_TASK/lab1.obj" "./LAB/1_TASK/lab2.obj" "./LAB/1_TASK/lab3.obj" "./LAB/2_QUEUE/lab1.obj" "./LAB/2_QUEUE/lab2.obj" "./LAB/2_QUEUE/lab3.obj" "./LAB/3_Interrupt/lab1.obj" "./LAB/3_Interrupt/lab2.obj" "./LAB/3_Interrupt/lab3.obj" "./drivers/buttons.obj" "./drivers/rgb.obj" "./third_party/FreeRTOS/Source/list.obj" "./third_party/FreeRTOS/Source/queue.obj" "./third_party/FreeRTOS/Source/tasks.obj" "./third_party/FreeRTOS/Source/timers.obj" "./third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "./third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "./third_party/FreeRTOS/Source/portable/MemMang/heap_2.obj" "./utils/uartstdio.obj" "./utils/ustdlib.obj" "../freertos_demo_ccs.cmd"  -llibc.a -l"/home/nghia/ti/SW-TM4C-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" 
-<Linking>
-remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
-Finished building target: "lab1.out"
- 
-"/home/nghia/ti/ccs1020/ccs/utils/tiobj2bin/tiobj2bin" "lab1.out" "lab1.bin" "/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armofd" "/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armhex" "/home/nghia/ti/ccs1020/ccs/utils/tiobj2bin/mkhex4bin"
+rm -rf  "lab1.bin"  "lab1.out" 
+rm -rf "freertos_demo.obj" "startup_ccs.obj" "Config_Register/Config_Register.obj" "FSM/FSM.obj" "LAB/1_TASK/lab1.obj" "LAB/1_TASK/lab2.obj" "LAB/1_TASK/lab3.obj" "LAB/2_QUEUE/lab1.obj" "LAB/2_QUEUE/lab2.obj" "LAB/2_QUEUE/lab3.obj" "LAB/3_Interrupt/lab1.obj" "LAB/3_Interrupt/lab2.obj" "LAB/3_Interrupt/lab3.obj" "Nokia5110/SPI.obj" "drivers/buttons.obj" "drivers/rgb.obj" "third_party/FreeRTOS/Source/list.obj" "third_party/FreeRTOS/Source/queue.obj" "third_party/FreeRTOS/Source/tasks.obj" "third_party/FreeRTOS/Source/timers.obj" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "third_party/FreeRTOS/Source/portable/MemMang/heap_2.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
+rm -rf "freertos_demo.d" "startup_ccs.d" "Config_Register/Config_Register.d" "FSM/FSM.d" "LAB/1_TASK/lab1.d" "LAB/1_TASK/lab2.d" "LAB/1_TASK/lab3.d" "LAB/2_QUEUE/lab1.d" "LAB/2_QUEUE/lab2.d" "LAB/2_QUEUE/lab3.d" "LAB/3_Interrupt/lab1.d" "LAB/3_Interrupt/lab2.d" "LAB/3_Interrupt/lab3.d" "Nokia5110/SPI.d" "drivers/buttons.d" "drivers/rgb.d" "third_party/FreeRTOS/Source/list.d" "third_party/FreeRTOS/Source/queue.d" "third_party/FreeRTOS/Source/tasks.d" "third_party/FreeRTOS/Source/timers.d" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/port.d" "third_party/FreeRTOS/Source/portable/MemMang/heap_2.d" "utils/uartstdio.d" "utils/ustdlib.d" 
+rm -rf "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.d" 
+Finished clean
  
 
 **** Build Finished ****

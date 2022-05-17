@@ -10,6 +10,7 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./blinky.obj" \
 "./startup_ccs.obj" \
+"./Nokia5110/SPI.obj" \
 "./driver/startup.obj" \
 "./utils/uartstdio.obj" \
 "./utils/ustdlib.obj" \
@@ -26,9 +27,11 @@ RMDIR := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include Nokia5110/subdir_vars.mk
 -include driver/subdir_vars.mk
 -include utils/subdir_vars.mk
 -include subdir_rules.mk
+-include Nokia5110/subdir_rules.mk
 -include driver/subdir_rules.mk
 -include utils/subdir_rules.mk
 -include objects.mk
@@ -146,7 +149,7 @@ all: blinky.out
 blinky.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --advice:power="all" --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=TARGET_IS_TM4C123_RB1 -g --c89 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --ual -z -m"blinky_ccs.map" --heap_size=0 --stack_size=512 -i"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/lib" -i"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="blinky_linkInfo.xml" --rom_model -o "blinky.out" $(ORDERED_OBJS)
+	"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --advice:power="all" --define=ccs="ccs" --define=TARGET_IS_BLIZZARD_RB1 --define=PART_TM4C123GH6PM -g --c89 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --ual -z -m"blinky_ccs.map" --heap_size=0 --stack_size=512 -i"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/lib" -i"/home/nghia/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="blinky_linkInfo.xml" --rom_model -o "blinky.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -162,8 +165,8 @@ blinky.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "blinky.obj" "startup_ccs.obj" "driver/startup.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
-	-$(RM) "blinky.d" "startup_ccs.d" "driver/startup.d" "utils/uartstdio.d" "utils/ustdlib.d" 
+	-$(RM) "blinky.obj" "startup_ccs.obj" "Nokia5110/SPI.obj" "driver/startup.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
+	-$(RM) "blinky.d" "startup_ccs.d" "Nokia5110/SPI.d" "driver/startup.d" "utils/uartstdio.d" "utils/ustdlib.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

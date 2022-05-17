@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="159"/>
+		<item key="DIALOG_X_ORIGIN" value="0"/>
 		<item key="DIALOG_Y_ORIGIN" value="64"/>
 	</section>
 	<section name="ImportExportAction">
@@ -16,5 +16,9 @@
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
 			<item value="/home/nghia/ti/SW-TM4C-2.1.4.178/third_party"/>
 		</list>
+	</section>
+	<section name="MemoryDumperFillAction">
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>

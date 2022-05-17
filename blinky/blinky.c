@@ -1,12 +1,17 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include "stdlib.h"
+#include <string.h>
+#include <math.h>
 #include "inc/hw_types.h"//macro
 #include "inc/hw_uart.h"
 #include "inc/hw_memmap.h"//base address of the memories and peripherals.
 #include "inc/hw_gpio.h"//Defines and Macros for GPIO hardware.
 #include "inc/hw_ints.h"//Macros that define the interrupt assignment
 #include "inc/hw_pwm.h"
+#include "inc/hw_adc.h"
+#include "inc/hw_ssi.h"
+#include "driverlib/debug.h"
 #include "driverlib/sysctl.h"//SYSCTL register
 #include "driverlib/rom.h"//ROM library
 #include "driverlib/rom_map.h"//ROM map
@@ -20,40 +25,31 @@
 #include "driverlib/udma.h"
 #include "driverlib/pwm.h"
 #include "driverlib/ssi.h"
-#include <string.h>
+#include "driverlib/fpu.h"
+#include "driverlib/adc.h"
 #include "driver/startup.h"
-#ifdef DEBUG
-void
-__error__(char *pcFilename, uint32_t ui32Line)
-{
-    while(1);
+#include "Nokia5110/SPI.h"
+//#include "inc/tm4c123gh6pm.h"
+
+void Delay(unsigned long ulCount){
+    do{
+        ulCount--;
+    }while(ulCount);
 }
-#endif
-uint32_t Duty = 25;
-void Systick_Handler(){
-    static uint32_t High = 0;
-    static uint32_t Low = 0;
-    if(Duty>99){
-        GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_0, GPIO_PIN_0);
-    }else if(High!=0){
-        High--;
-        GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_0, GPIO_PIN_0);
-    }else if(Low!=0){
-        Low--;
-        GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_0, 0);
-    }else{
-        High = Duty*10-1;
-        Low = 999-High;
+void Delay100ms(unsigned long count){unsigned long volatile time;
+while(count>0){
+    time = 727240;  // 0.1sec at 80 MHz
+    while(time){
+        time--;
     }
+    count--;
+}
 }
 int main(){
-    SysCtlClockSet(SYSCTL_SYSDIV_8|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
-    //SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
-    GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_0);
-    Systick_Init();
-    SysTickIntRegister(Systick_Handler);
-    IntMasterEnable();
+    SysCtlClockSet(SYSCTL_SYSDIV_4|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
+    Uart_Init();
     while(1){
+
     }
 }
 
