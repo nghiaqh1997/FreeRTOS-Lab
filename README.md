@@ -1,20 +1,19 @@
-# Thiết kế trò chơi đơn giản sử dụng FreeRTOS #
-Bắn máy bay ;))
-## Yêu cầu ##
+# Tiva TM4C123 Launchpad FreeRTOS Demo #
+Những bài lập trình cơ bản về bé Tiva này
+## Required Components ##
 - Một bé Tiva
 - CCS
-- Biến trở
-- Loa ( vẫn đang cân nhắc)
-- Nokia 5110 lcd (Không có tiền mua lcd tft :v)
-### Nội dung yêu cầu ###
+### Contents ###
 - blinky
-	- Kiểm tra hàm đơn lẻ
+	- Chứa hàm khởi động tiva
 - FSM
-	- Kiểm tra máy trạng thái đơn lẻ
+	- Chứa khai báo máy trạng thái cơ bản
 - lab1
-	- Chức năng thành phần
-		- Nokia 5110 Hiển thị trò chơi
-		- Biến trở điều khiển vị trí đơn vị theo phương ngang
-		- Phím bấm để tương tác
-		- Loa phát âm thanh ( Hên xui )
-	- Happy :v 
+	- Chứa các bài lab về FreeRTOS
+		- lab1 Task
+		- lab2 Queue
+		- lab3 Interrupt
+	- file main c chứa bài tập gửi chuỗi kí tự từ PC:
+		- ledon thì sáng led red
+		- ledoff thì tắt led red
+		- ledtoggle thì nhấp nháy led
